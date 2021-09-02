@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.ico">
+  <script src="index.js" defer></script>
+  <title>js-clock</title>
+</head>
+<body>
+  <div class="container">
+    <div class="switch-wrapper">
+      <label class="switch">
+        <input type="checkbox" class="switch__checkbox">
+        <span class="switch__slider theme-slider">
+          <span class="theme-slider__day">&nbsp;</span>
+          <span class="theme-slider__night">&nbsp;</span>
+        </span>
+      </label>
+    </div>
+
+    <div class="clock-container">
+      <div class="clock-wrapper">
+        <div class="clock">
+          <div class="needle hour"></div>
+          <div class="needle minute"></div>
+          <div class="needle second"></div>
+          <div class="centre-point"></div>
+        </div>
+
+        <div class="time">12:00</div>
+        <div class="date">Monday, June 17</div>
+      </div>
+    </div>
+
+    <div class="relax-container">
+      <button class="relax-btn start-btn">Push for relax</button>
+      <div class="timer-block display-none">
+        <div class="timer"></div>
+        <button class="relax-btn stop-btn">Stop...</button>
+      </div>
+      <div class="input-container display-none">
+        <p class="relax-title">How many minutes you want to relax?</p>
+        <button class="input-btn minus">&#8211;</button>
+        <input type="number" class="relax-input" min="0" max="60" value="1" step="1" readonly>
+        <button class="input-btn plus">&#43;</button>
+        <br>
+        <button class="relax-btn begin-btn">Let it be!</button>
+      </div>
+    </div>
+    <audio class="music-light" loop>
+      <source src="assets/music/day.ogg">
+    </audio>
+    <audio class="music-dark" loop>
+      <source src="assets/music/night.ogg">
+    </audio>
+  </div>
+</body>
+</html>
