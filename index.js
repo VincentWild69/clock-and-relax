@@ -82,9 +82,6 @@ btnMinus.addEventListener('click', function() {
   this.nextElementSibling.stepDown()
 } );
 
-musicDark.volume = 0.5;
-musicLight.volume = 0.5;
-
 startBtn.addEventListener('click', function() {
   inputContainer.classList.remove('display-none');
   startBtn.classList.add('display-none');

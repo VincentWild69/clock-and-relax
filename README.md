@@ -1,5 +1,7 @@
 # clock-and-relax
 
+https://vincentwild69.github.io/clock-and-relax/index.html
+
 **Minimalistic app with clock and relax-timer**
 * clock
 * dark / light theme
