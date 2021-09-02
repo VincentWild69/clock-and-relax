@@ -111,9 +111,6 @@ beginBtn.addEventListener('click', function() {
     musicLight.currentTime = 0;
     musicLight.play();
 
-    let relaxTime = Number(relaxInput.value);
-    let timerTime = relaxTime * 60;
-
     startTimer(timerTime);
     let end = setTimeout(stopRelax, relaxTime * 60000);
     stopBtn.addEventListener('click', () => {clearTimeout(end)});
@@ -138,6 +135,7 @@ function stopRelax() {
 //timer
 function startTimer(timerTime) { 
 
+  timerTime -= 1; //отнимаю 1 секунду для визуальной точности прерывания таймера
   let timerRelax = setTimeout(function tick() {
     
     let timerMinutes = Math.floor(timerTime / 60);

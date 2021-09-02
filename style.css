@@ -6,7 +6,7 @@
   --bg-color: #eeeeee;
   --switch-theme-bg-color: #bebebe;
   --switch-theme-btn-color: #333;
-  --relax-btn-hover: #d0d0d0;
+  --relax-btn-hover: #e4e4e4;
   --timer-color: #fff;
 }
 
@@ -191,12 +191,13 @@ button {
 
 .needle.minute {
   transform: translate(-50%, -100%) rotate(0deg);
-  height: 93px;
+  height: 91px;
 }
 
 .needle.second {
   transform: translate(-50%, -100%) rotate(0deg);
   height: 93px;
+  width: 2px;
   background-color: #882c2c;
 }
 
@@ -255,13 +256,12 @@ button {
   border-radius: 40px;
   background-color: var(--bg-color);
   /* background-color: transparent; */
-  transition: all 0.4s ease-in;
+  transition: all 0.4s ease;
 }
 
 .relax-btn:hover {
   background-color: var(--relax-btn-hover);
-  transition: all 0.4s ease-in;
-  transform: scale(1.01);
+  transition: all 0.4s ease;
 }
 
 .input-container {
