@@ -41,7 +41,6 @@ html[data-theme='dark'] {
 body {
   margin: 0;
   font-size: 1.4rem;
-  overflow: hidden;
   background-color: var(--bg-color);
   transition: all 0.4s ease;
 }
@@ -74,7 +73,7 @@ button {
 
 /*Theme switcher*/
 .switch-wrapper {
-  margin-top: 8.5rem;
+  margin-top: 5rem;
   margin-right: 1.5rem;
   text-align: right;
 }
@@ -153,7 +152,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 
 .clock-wrapper {
@@ -245,7 +244,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 200px;
+  margin-top: 60px;
 }
 
 .relax-btn {
