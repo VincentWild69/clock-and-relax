@@ -1,16 +1,4 @@
 const body = document.body;
-const relaxInput = document.querySelector('.relax-input');
-const btnPlus = document.querySelector('.plus');
-const btnMinus = document.querySelector('.minus');
-const startBtn = document.querySelector('.start-btn');
-const beginBtn = document.querySelector('.begin-btn');
-const stopBtn = document.querySelector('.stop-btn');
-const inputContainer = document.querySelector('.input-container');
-const clockBlock = document.querySelector('.clock-container');
-const timerBlock = document.querySelector('.timer-block');
-const timer = document.querySelector('.timer');
-const musicLight = document.querySelector('.music-light');
-const musicDark = document.querySelector('.music-dark');
 
 // theme change
 const switcher = document.querySelector('.switch__checkbox');
@@ -74,6 +62,18 @@ setTime();
 setInterval(setTime, 1000);
 
 //relax
+const relaxInput = document.querySelector('.relax-input');
+const btnPlus = document.querySelector('.plus');
+const btnMinus = document.querySelector('.minus');
+const startBtn = document.querySelector('.start-btn');
+const beginBtn = document.querySelector('.begin-btn');
+const stopBtn = document.querySelector('.stop-btn');
+const inputContainer = document.querySelector('.input-container');
+const clockBlock = document.querySelector('.clock-container');
+const timerBlock = document.querySelector('.timer-block');
+const timer = document.querySelector('.timer');
+const musicLight = document.querySelector('.music-light');
+const musicDark = document.querySelector('.music-dark');
 
 btnPlus.addEventListener('click', function() {
   this.previousElementSibling.stepUp()
@@ -136,6 +136,8 @@ function stopRelax() {
 function startTimer(timerTime) { 
 
   timerTime -= 1; //отнимаю 1 секунду для визуальной точности прерывания таймера
+  
+  // использую рекурсивный таймаут вместо интервала, так как setInterval не работаеит ожидаемым образом
   let timerRelax = setTimeout(function tick() {
     
     let timerMinutes = Math.floor(timerTime / 60);
